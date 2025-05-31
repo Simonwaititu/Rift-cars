@@ -17,7 +17,6 @@ const nextConfig = {
     domains: [
       "v0.blob.vercel-storage.com",
       "www.car-logos.org",
-      // Add other domains you load images from
     ],
     remotePatterns: [
       {
@@ -29,7 +28,7 @@ const nextConfig = {
     minimumCacheTTL: 60 * 60 * 24 * 7, // 7 days
   },
   experimental: {
-    optimizeCss: true,
+    optimizeCss: false, // Disabled to avoid critters dependency issues
     optimizePackageImports: ["lucide-react", "date-fns", "lodash"],
   },
   compiler: {
